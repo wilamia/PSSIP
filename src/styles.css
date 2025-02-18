@@ -1,0 +1,78 @@
+body {
+    align-content: center;
+}
+.main-container ul {
+    display: flex;
+    flex-direction: row;
+}
+.main-container li {
+    list-style-type: none;
+    margin-right: 50px;
+    text-align: center;
+}
+.main-container li p{
+    font-family: Nunito, sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.main-container li a img {
+    border: #8789e1 1px solid;
+}
+.winter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spring {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.summer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.autumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-family: "Nunito Black", sans-serif;
+    font-size: 40px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.history h3 {
+    text-align: center;
+    font-family: "Nunito Black", sans-serif;
+    font-size: 20px;
+}
+.history p {
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+}
+.history ul {
+    font-family: Nunito, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.history li {
+    list-style-type: circle;
+    text-align: left;
+}
+td,
+table,
+tr, th{
+    border: black solid 1px;
+}
+td p {
+    text-align: center;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}

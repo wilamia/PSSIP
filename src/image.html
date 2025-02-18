@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/png/small-cat.png">
+    <title>Котики</title>
+    <link rel="stylesheet" href="images.css">
+</head>
+<body background="/images/png/background.png">
+<div class="main-container">
+    <h2>Простое изображение</h2>
+    <img src="/images/png/cat.png" alt="Котик" width="300">
+    <h2>Кнопочка</h2>
+    <button><img src="/images/png/cat.png" alt="Котик" width="300">Нажми на котика!</button>
+    <h1>Адаптивное изображение</h1>
+
+    <picture>
+        <source media="(max-width: 300px)" srcset="/images/png/small-cat.png">
+        <source media="(max-width: 1200px)" srcset="/images/png/big-cat.png">
+        <img src="/images/png/cat.png" alt="Котик" width="100%">
+    </picture>
+
+    <figure>
+        <img src="/images/png/alps.png" alt="Описание изображения" width="300">
+        <figcaption>Альпы</figcaption>
+    </figure>
+
+    <div class="gallery">
+        <figure class="image-container">
+            <img src="/images/png/december.png" alt="Декабрь" width="400">
+            <figcaption>Декабрь</figcaption>
+        </figure>
+        <figure class="image-container">
+            <img src="/images/png/january.png" alt="Январь" width="400">
+            <figcaption>Январь</figcaption>
+        </figure>
+        <figure class="image-container">
+            <img src="/images/png/february.png" alt="Фев" width="400">
+            <figcaption>Февраль</figcaption>
+        </figure>
+    </div>
+    <div class="media-content">
+        <h3>Релакс музыка</h3>
+        <audio controls loop>
+            <source src="/audio/Wolfgang_Amadeus_Mozart.mp3" type="audio/mp3">
+            <source src="/audio/Wolfgang_Amadeus_Mozart.ogg" type="audio/ogg">
+            <source src="/audio/Wolfgang_Amadeus_Mozart.wav" type="audio/wav">
+        </audio>
+
+        <h3>Милое видео</h3>
+        <video controls poster="/images/png/cat-intro.png" width="640" height="360">
+            <source src="/video/cat.mp4" type="video/mp4">
+            <source src="/video/cat.webm" type="video/webm">
+            <track src="/subtitles/subtitles.vtt" kind="subtitles" srclang="ru" label="Русские субтитры">
+        </video>
+    </div>
+</div>
+</body>
+</html>
