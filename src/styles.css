@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    background: ghostwhite;
+    margin: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+button {
+    margin-right: 10px;
+}
