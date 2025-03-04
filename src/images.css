@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    position: relative; /* Устанавливаем относительное позиционирование для родителя */
+}
+.image1 {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+.image2 {
+    position: relative; /* Относительное позиционирование */
+    margin-top: 100px;
+    left: 50px;
+    width: 50px;
+}
+.image3 {
+    position: fixed; /* Фиксированное позиционирование */
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+}
