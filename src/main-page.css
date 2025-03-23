@@ -1,0 +1,1155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #3740FF;
+    height: 66px;
+}
+
+header p.upper-text {
+    color: white;
+    font-size: 13px;
+    font-family: "TT Travels Regular", serif;
+    margin-top: 18px;
+    margin-bottom: 3px;
+}
+
+header p span.sale {
+    color: #00FF00;
+    margin-left: 14px;
+    font-family: "SF Pro Display", serif;
+}
+
+header p span.post-sale {
+    color: #FFE226;
+    font-family: "SF Pro Display", serif;
+}
+
+header p.lower-text {
+    color: #FFFFFF50;
+    font-family: "SF Pro Display", serif;
+    font-size: 12px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    flex: 0 1 auto;
+    position: absolute;
+}
+
+.graffiti {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 66px;
+}
+
+header .graffiti img#figure1 {
+    width: 3.44%;
+    max-width: 47px;
+    margin-left: 6.73%;
+    margin-bottom: 13.6%;
+}
+
+header .graffiti img#figure2 {
+    width: 2.13%;
+    max-width: 29px;
+    margin-top: 11px;
+    margin-left: 12.37188873%;
+}
+
+header img#figure3 {
+    width: 0.95168375%;
+    max-width: 13px;
+    margin-left: 19.54612006%;
+    margin-top: 27px;
+
+}
+
+header img#figure4 {
+    width: 1.80819912%;
+    max-width: 24.87px;
+    margin-left: 25.32942899%;
+    margin-top: 15px;
+}
+
+header img#figure5 {
+    width: 3.44%;
+    max-width: 47px;
+    margin-left: 29.81991215%;
+    margin-top: 9px;
+    rotate: 340deg;
+}
+
+header img#figure6 {
+    width: 3.44%;
+    max-width: 47px;
+    margin-left: 72.03513909%;
+    margin-top: 9px;
+}
+
+header img#figure7 {
+    width: 3.44%;
+    max-width: 24.7px;
+    margin-left: 79.79502196%;
+    margin-top: 9px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+main {
+    width: 79%;
+    max-width: 1060px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 34px;
+    margin-bottom: 62px;
+}
+
+.main-nav ul#menu {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-nav li {
+    font-family: Poppins Regular, sans-serif;
+    font-size: 12px;
+    margin-right: 21px;
+    margin-left: 21px;
+}
+
+.main-nav button {
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: none;
+    background: none;
+}
+main nav button:hover {
+    background-color: #474DFF;
+    color: #ffffff;
+    border: solid transparent 1px;
+    border-radius: 5px;
+}
+.main-nav button#free-trial:hover {
+    background-color: #ffffff;
+    color: #020202;
+    border: solid #474DFF 1px;
+}
+
+.main-nav button#free-trial {
+    height: 42px;
+    width: 129px;
+    background-color: #3740FF;
+    font-size: 12px;
+    font-family: "SF Pro Display", serif;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+img#logo {
+    width: 100%;
+    max-width: 138.41px;
+}
+
+.upper-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.upper-content img#cloud {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    max-width: 1060px;
+}
+
+.upper-content img#robo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -11px;
+    width: 100%;
+    max-width: 458.83px;
+}
+
+.upper-content img#cube {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 156px;
+    width: 100%;
+    max-width: 183px;
+    margin-top: 464px;
+    z-index: 0;
+}
+
+.upper-content h1 {
+    width: 320px;
+    font-size: 76px;
+    font-family: "Gilory-Heavy", serif;
+    white-space: pre-wrap;
+    margin-bottom: 34px;
+    z-index: 1;
+    color: #080940;
+}
+
+.upper-content button {
+    height: 66px;
+    width: 202px;
+    background-color: #3740FF;
+    font-size: 20px;
+    font-family: "San Francisco Pro Display", serif;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-bottom: 303px;
+    z-index: 1;
+}
+.upper-content button:hover {
+    background-color: #ffffff;
+    color: #020202;
+    border: solid #474DFF 1px;
+}
+.lower-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 47px;
+}
+
+.cards-container {
+    position: relative;
+    flex: 1;
+}
+
+.right-container {
+    right: 0;
+    width: 100%;
+    max-width: 432px;
+}
+
+img#card1 {
+    position: absolute;
+    margin-left: 79px;
+    z-index: 1;
+    width: 100%;
+    max-width: 128px;
+}
+
+img#card2 {
+    position: absolute;
+    margin-left: 246px;
+    z-index: 1;
+    width: 100%;
+    max-width: 304px;
+}
+
+img#card3 {
+    position: absolute;
+    margin-left: 152px;
+    margin-top: -175px;
+    z-index: 0;
+    width: 100%;
+    max-width: 183px;
+}
+
+.right-container {
+    margin-top: -38px;
+}
+
+p.title {
+    font-weight: 700;
+    font-size: 38px;
+    font-family: "Gilory-Heavy", serif;
+    color: #080940;
+}
+
+.right-container p#blue-title-text {
+    font-size: 14px;
+    font-family: "Gilory-Heavy", serif;
+    margin-top: 50px;
+    color: #545AEE;
+}
+
+.right-container p#purple-title-text {
+    font-size: 18px;
+    font-family: "SF Pro Display", serif;
+    margin-top: 54px;
+    color: #FF014E;
+    font-weight: 700;
+}
+
+.right-container p#title-text {
+    font-size: 14px;
+    margin-top: 15px;
+    font-family: "SF Pro Display", serif;
+    color: #080940;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 181px;
+    grid-gap: 25px;
+    min-height: 482px;
+}
+
+.first-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 248px;
+    height: 445px;
+    background-color: rgba(125, 130, 255, 0.05);
+    border-radius: 30px;
+    border-color: transparent;
+}
+
+.sale-button {
+    width: 85px;
+    height: 33px;
+    position: absolute;
+    background-color: #474DFF;
+    border-radius: 30px;
+    border-color: transparent;
+    margin-top: 38px;
+    text-align: center;
+}
+
+.sale-button p {
+    font-family: Poppins, serif;
+    font-size: 13px;
+    margin-top: 7px;
+    font-weight: 700;
+    color: white;
+}
+
+.first-card ul {
+    position: absolute;
+    margin-top: 171px;
+}
+
+.first-card ul li p {
+    color: #080940;
+    font-family: SF Pro Display, serif;
+    font-size: 12px;
+}
+
+.first-card ul li {
+    line-height: 2;
+    color: rgba(2, 2, 2, 0.1);
+}
+
+.first-card p.followers {
+    position: absolute;
+    margin-top: 87px;
+    color: #080940;
+    font-size: 17px;
+    font-family: SF Pro Display, serif;
+}
+
+.first-card button {
+    font-size: 10px;
+    width: 155px;
+    height: 43px;
+    border: 2px solid #474DFF;
+    background-color: transparent;
+    border-radius: 30px;
+    margin-top: 361px;
+}
+.first-card button:hover {
+    background-color: #474DFF;
+    color: white;
+}
+.line {
+    border-bottom: 3px solid #f00;
+}
+
+.first-card p.price {
+    position: absolute;
+    margin-top: 116px;
+    color: #FF014E;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.first-card p.price::after {
+    content: "";
+    border-bottom: 1px solid #474DFF;
+}
+
+.first-card .line {
+    width: 95%;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+    position: absolute;
+    margin-top: 159.8px;
+}
+
+.instruction {
+    display: flex;
+    margin-top: 212px;
+}
+
+.right-instruction {
+    margin-top: -75px;
+}
+
+.right-instruction img {
+    width: 681px;
+}
+
+.left-instruction p.title {
+    margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.left-instruction p#article {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Gilory-Heavy, serif;
+}
+
+.left-instruction p#text {
+    font-size: 14px;
+    white-space: pre-wrap;
+    font-family: "SF Pro Display", serif;
+    color: rgba(2, 2, 2, 0.8);
+}
+
+.ad {
+    margin-top: 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.ad p#ad-title {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 17px;
+    font-family: Gilory-Heavy, serif;
+}
+
+.ad p#ad-text {
+    font-family: "SF Pro Display", serif;
+    font-size: 16px;
+    color: rgba(8, 9, 64, 0.8);
+}
+
+.advantages {
+    margin-top: 107px;
+    min-height: 610px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 129px;
+}
+
+.card {
+    width: 288.46px;
+    margin-bottom: 94px;
+    padding: 30px;
+}
+
+.card img {
+    height: 70px;
+    margin-bottom: 22px;
+}
+
+.card p {
+    margin-bottom: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(8, 9, 64, 0.8);
+    font-family: Poppins, serif;
+}
+
+.card p.text {
+    color: rgba(2, 2, 2, 0.5);
+    font-size: 14px;
+    font-family: "SF Pro Display", serif;
+}
+
+.card:hover {
+    background-color: rgba(218, 214, 238, 0.2);
+    border-radius: 15px;
+}
+.reasons {
+    align-self: center;
+    width: 100%;
+    max-width: 1366px;
+    min-height: 756px;
+    margin: 0 auto;
+    background: #474DFF;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.reasons .reasons-left p.title {
+    margin-top: 105px;
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+}
+
+.reasons .reasons-left p.text {
+    font-family: "SF Pro Display", serif;
+    margin-top: 27px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.reasons-left {
+    max-width: 401px;
+    margin-left: 140px;
+}
+
+.reasons-left ul {
+    margin-top: 50px;
+    font-size: 16px;
+    list-style: none;
+    font-family: "SF Pro Display", serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.reasons-right img {
+    margin-top: 64px;
+    margin-left: 133px;
+    height: 240px;
+}
+
+.reasons-left ul li p{
+    height: 51px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.reasons-left ul li p:hover{
+  border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.reasons-right p.title {
+    margin-top: 56px;
+    margin-left: 170px;
+    margin-bottom: 27px;
+    color: white;
+    font-size: 24px;
+}
+
+.reasons-right p.text {
+    color: white;
+    font-size: 14px;
+    line-height: 25px;
+    max-width: 516px;
+    margin-left: 170px;
+    font-family: "SF Pro Display", serif;
+}
+
+.second-reason {
+    width: 79%;
+    max-width: 1060px;
+    display: flex;
+    flex-direction: row;
+    margin: 202.99px 140px 181px;
+}
+
+.second-reason-left img {
+    height: 461px;
+}
+
+.second-reason-right {
+    margin-left: 60px;
+}
+
+.second-reason-right p.title {
+    font-size: 38px;
+    margin-bottom: 32px;
+}
+
+.second-reason-right p.text {
+    font-size: 14px;
+    font-family: "SF Pro Display", serif;
+    color: rgba(8, 9, 64, 0.8);
+    margin-bottom: 74px;
+    line-height: 25px;
+}
+
+.second-reason-right button {
+    height: 50px;
+    width: 152px;
+    font-size: 18px;
+    border: none;
+    background: #474DFF;
+    color: white;
+    border-radius: 5px;
+    margin-left: 4px;
+}
+.second-reason-right button:hover {
+    background-color: #ffffff;
+    color: #020202;
+    border: solid #474DFF 1px;
+}
+
+.questions {
+    width: 79%;
+    max-width: 1060px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    min-height: 697px;
+}
+
+.faq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 40px; /* Space between questions */
+    text-align: left;
+}
+
+.questions p.title {
+    text-align: center;
+    margin-bottom: 119px;
+    font-family: Gilory-Heavy, serif;
+}
+
+.question p {
+    text-align: left;
+
+}
+
+.question {
+    margin-right: 157px;
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 50px;
+    padding: 40px;
+}
+.question:hover {
+    background-color: rgba(218, 214, 238, 0.2);
+    border-radius: 15px;
+}
+
+.question p.titles {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 22px;
+    color: rgba(8, 9, 64, 0.8);
+    font-family: Gilory-Heavy, serif;
+}
+
+.question p.text {
+    color: rgba(8, 9, 64, 0.8);
+    text-align: left;
+    font-size: 14px;
+    font-family: "SF Pro Display", serif;
+}
+
+.reviews {
+    width: 79%;
+    max-width: 1060px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 140px;
+    margin-top: 265px;
+    min-height: 216px;
+}
+
+.reviews p.title {
+    font-size: 38px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 50px;
+}
+
+.review {
+    height: 216px;
+    width: 100%;
+    max-width: 372px;
+    background-color: #fff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-right: 31px;
+}
+
+.review img {
+    height: 18.41px;
+    margin-top: 43.28px;
+    margin-left: 45.16px;
+}
+
+.review p.text {
+    font-size: 13px;
+    line-height: 20px;
+    margin-left: 45px;
+    margin-top: 19.31px;
+    font-family: "SF Pro Display", serif;
+    margin-right: 10px;
+    max-width: 253px;
+}
+
+.review p.name {
+    font-size: 13px;
+    margin-left: 45px;
+    margin-top: 13px;
+    font-weight: bold;
+}
+
+button#review {
+    width: 242px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 58px;
+    background: #474DFF;
+    border: none;
+    border-radius: 5px;
+}
+button#review:hover {
+    background-color: #ffffff;
+    color: #020202;
+    border: solid #474DFF 1px;
+}
+footer {
+    width: 100%;
+    max-width: 1366px;
+    background-color: #080940;
+    height: 573px;
+    margin-top: 82px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer img#logo-footer {
+    height: 48px;
+    margin-left: 140px;
+    margin-top: 105px;
+}
+
+footer p.title {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "SF Pro Display", serif;
+    margin-top: 105px;
+    margin-bottom: 52px;
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer ul li {
+    height: 30px;
+}
+
+footer .contact button {
+    margin-top: 22px;
+    border: none;
+    border-radius: 5px;
+    background-color: #474DFF;
+    width: 119px;
+    height: 41px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+footer .contact button:hover {
+    background-color: #ffffff;
+    color: #020202;
+    border-color: #474DFF;
+}
+footer .contact {
+    margin-right: 187px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@font-face {
+    font-family: SF Pro Display;
+    src: url("./fonts/SF-Pro-Display-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Poppins Regular;
+    src: url("./fonts/Poppins-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: Gilory-Heavy;
+    src: url("./fonts/Gilroy-Heavy.ttf") format("opentype");
+}
+@media (max-width: 1210px) {
+
+    img#card1 {
+        width: 40%;
+    }
+
+    img#card2 {
+        width: 40%;
+    }
+
+    img#card3 {
+        width: 40%;
+    }
+
+    .right-container {
+        width: 50%;
+        max-width: 600px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1250px) {
+    .first-card ul li p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1070px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+
+    header p.upper-text,
+    header p.lower-text {
+        font-size: 12px;
+    }
+
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px
+    }
+
+    .main-nav ul#menu li {
+        gap: 0 40px;
+    }
+
+    .upper-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .upper-content h1 {
+        font-size: 40px;
+        width: 100%;
+        align-self: center;
+    }
+
+    .upper-content button {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+
+    .upper-content img#cloud {
+        visibility: hidden;
+    }
+
+    .upper-content img#robo {
+        align-self: center;
+        position: relative;
+        width: 100%;
+        max-width: 458.83px;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+
+    .upper-content img#cube {
+        display: none;
+    }
+
+    .lower-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-container {
+        display: none;
+    }
+
+    .right-container {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 0;
+    }
+
+    .cards {
+        margin-top: 100px;
+        flex-wrap: wrap;
+    }
+
+
+    .first-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .instruction {
+        flex-direction: column;
+        align-self: center;
+        width: 100%;
+        max-width: 600px;
+        margin-top: 100px;
+    }
+
+    .right-instruction {
+        margin-top: 20px;
+    }
+
+    .right-instruction img {
+        width: 100%;
+    }
+
+    .ad {
+        text-align: center;
+        align-self: center;
+        margin-top: 100px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .advantages {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 100px auto;
+    }
+
+    .card {
+        flex: 1 1 45%;
+        width: 288.46px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .reasons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reasons-left {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        max-width: 600px;
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .reasons-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        align-self: center;
+        margin-bottom: 100px;
+    }
+
+    .reasons-right img {
+        padding: 0;
+        margin: 50px 0 50px;
+        width: 90%;
+    }
+
+    .reasons-right p {
+        margin: 0;
+        align-self: center;
+    }
+
+    .reasons-right p.title {
+        margin: 0 auto 27px;
+        color: white;
+        font-size: 24px;
+    }
+
+    .reasons-right p.text {
+        color: white;
+        font-size: 14px;
+        line-height: 25px;
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        font-family: "SF Pro Display", serif;
+    }
+
+    .second-reason {
+        flex-direction: column;
+        align-items: center;
+        margin: 100px 0;
+    }
+
+    .second-reason img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .faq {
+        max-width: 600px;
+        width: 100%;
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .question {
+        width: calc(100% - 80px);
+        max-width: 600px;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .reviews p.title {
+        margin: 0 0 50px;
+        width: 100%;
+    }
+
+    .review {
+        margin: 0 0 50px;
+    }
+
+    .review p.text {
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    footer img#logo-footer {
+        margin: 100px 0 0;
+    }
+
+    .about-folo {
+        align-self: center;
+        width: 270px;
+    }
+
+    .services {
+        width: 270px;
+        align-self: center;
+    }
+
+    footer .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 100px;
+        align-self: center;
+        width: 270px;
+    }
+    .contact button {
+        margin: 0;
+        align-self: center;
+    }
+
+}
+
+@media (max-width: 950px) {
+    header p.upper-text,
+    header p.lower-text {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .graffiti {
+       display: none;
+    }
+}
+@media (max-width: 700px) {
+    .reasons p.title {
+        font-size: 26px;
+    }
+    .second-reason p.title {
+        font-size: 26px;
+    }
+}
+@media (max-width: 500px) {
+    .review p.text {
+        max-width: 200px;
+    }
+}
