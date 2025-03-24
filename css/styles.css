@@ -975,7 +975,7 @@ footer a {
         align-items: center;
         justify-content: center;
         height: 100%;
-        margin: 100px auto;
+        margin: 70px auto;
     }
 
     .card {
@@ -1042,14 +1042,16 @@ footer a {
     .second-reason {
         flex-direction: column;
         align-items: center;
-        margin: 100px 0;
+        margin: 70px 0;
     }
 
     .second-reason img {
         width: 100%;
         margin-bottom: 50px;
     }
-
+    .second-reason-right {
+        margin: 0;
+    }
     .questions {
         display: flex;
         flex-direction: column;
@@ -1065,10 +1067,14 @@ footer a {
         padding: 0;
         grid-template-columns: 1fr;
     }
-
+    .questions p.title {
+        margin-bottom: 30px;
+    }
     .question {
         width: calc(100% - 80px);
+        padding: 20px;
         max-width: 600px;
+        margin-bottom: 10px;
     }
 
     .reviews {
@@ -1111,8 +1117,14 @@ footer a {
     .services {
         width: 270px;
         align-self: center;
+        margin-bottom: 40px;
     }
-
+    .about-folo p.title {
+        margin-top: 10px;
+    }
+    .contact p.title {
+        margin-top: 50px;
+    }
     footer .contact {
         display: flex;
         flex-direction: column;
