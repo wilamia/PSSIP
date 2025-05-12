@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
+
+<script>
+    // 1. Создание трех массивов
+    const array1 = [1, 2, 3, 4, 5];
+    const array2 = ['a', 'b', 'c', 'd'];
+    const array3 = [true, false, true, false, true];
+
+    // 2. Создание четвертого массива и вывод его длины
+    const combinedArray = [...array1, ...array2, ...array3];
+    alert(`Длина массива: ${combinedArray.length}`);
+
+    // 3. Удаление 2-х произвольных элементов и добавление 3-х элементов
+    combinedArray.splice(Math.floor(combinedArray.length / 2), 2);
+    combinedArray.splice(3, 0, 'new1', 'new2', 'new3');
+    alert(`Длина массива после изменений: ${combinedArray.length}`);
+
+    // 4. Удаление последнего элемента двумя способами
+    const lastElement1 = combinedArray.pop(); // 1 способ
+    const lastElement2 = combinedArray[combinedArray.length - 1]; // 2 способ
+    combinedArray.length = combinedArray.length - 1; // удаление вручную
+
+    // 5. Удаление 3-х произвольных элементов с помощью delete
+    delete combinedArray[1];
+    delete combinedArray[3];
+    delete combinedArray[5];
+
+    // 6. Вывод полученного массива
+    console.log(`Длина массива: ${combinedArray.length}`);
+    combinedArray.forEach((element, index) => {
+        if (element !== undefined) {
+            console.log(`Индекс ${index}: ${element}`);
+        }
+    });
+
+    // 7. Рассчет среднего значения и проверка на его наличие
+    const numbersArray = [10, 20, 30, 40, 50];
+    const average = numbersArray.reduce((a, b) => a + b) / numbersArray.length;
+    console.log(`Среднее значение: ${average}`);
+    console.log(`Содержится ли среднее значение в массиве: ${numbersArray.includes(average)}`);
+
+    // 8. Очистка массива двумя способами
+    combinedArray.length = 0; // 1 способ
+    // combinedArray = []; // 2 способ
+
+    // 9. Вставка двоеточия между нечетными числами
+    function insertColons(number) {
+        const numberStr = number.toString();
+        let result = '';
+        for (let i = 0; i < numberStr.length; i++) {
+            result += numberStr[i];
+            if (numberStr[i] % 2 !== 0 && numberStr[i + 1] % 2 !== 0) {
+                result += ':';
+            }
+        }
+        return result;
+    }
+
+    const userNumber = prompt("Введите многозначное число:");
+    const formattedNumber = insertColons(userNumber);
+    alert(`Результат: ${formattedNumber}`);
+</script>
 
 </body>
 </html>
