@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    align-self: center;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.elements {
+    width: 50%;
+}
+.cl1 {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+.cl2 {
+    color: red;
+    font-weight: bold;
+}
+.cl3 {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.cl4 {
+    color: black;
+    border: 2px dashed red;
+    padding: 5px;
+}
+.cl5 {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+.result {
+    align-self: center;
+    margin-top: 100px;
+}
+.result button {
+    height: 50px;
+    padding: 10px;
+}
+.greet {
+    align-self: center;
+    margin-top: 10px;
+}
+.greet button {
+    height: 50px;
+    margin-top: 30px;
+}
+input, button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -2,9 +2,184 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <script>
+        let sum = 0
+        function applyCl2(element) {
+            element.classList.add('cl2');
+        }
+
+        function removeCl2(element) {
+            element.classList.remove('cl2');
+            element.classList.add('cl5');
+        }
+
+        function applyCl3(element) {
+            element.classList.add('cl3');
+        }
+
+        function applyCl4(element) {
+            element.classList.add('cl4');
+        }
+
+        function changeColorToYellow(element) {
+            element.style.color = 'yellow';
+        }
+
+        function changeBackgroundColor(element) {
+            element.style.backgroundColor = 'lightblue';
+        }
+
+        function italicizeElement6(element) {
+            element.style.fontStyle = 'italic';
+        }
+
+        function addToSum(value) {
+            sum += value;
+        }
+
+        function showResult() {
+            alert("Сумма цифр: " + sum);
+            sum = 0;
+        }
+        function greetUser() {
+            const name = prompt("Введите ваше имя:");
+            let greetingMessage;
+
+            if (name) {
+                greetingMessage = `Привет, ${name}! Рад вас видеть!`;
+            } else {
+                greetingMessage = "Привет, незнакомец!";
+            }
+
+            document.getElementById('greeting').innerText = greetingMessage;
+        }
+        function changeFont() {
+            const message = document.getElementById('message');
+            message.style.fontFamily = 'Courier New';
+            message.style.fontWeight = 'bold';
+            message.style.fontStyle = 'italic';
+        }
+
+        function changeColor() {
+            const message = document.getElementById('message');
+            message.style.color = 'violet';
+        }
+        function getUserInfo() {
+            const name = prompt("Введите ваше имя:");
+            const age = parseInt(prompt("Введите ваш возраст:"), 10);
+            let message;
+
+            switch (true) {
+                case (age >= 2 && age <= 5):
+                    const kindergarten = prompt("Введите номер сада:");
+                    message = `${name}, вы посещаете сад №${kindergarten}.`;
+                    break;
+                case (age >= 6 && age <= 16):
+                    const school = prompt("Введите название школы:");
+                    message = `${name}, вы учитесь в школе ${school}.`;
+                    break;
+                case (age >= 17 && age <= 21):
+                    const university = prompt("Введите название учебного заведения:");
+                    message = `${name}, вы учитесь в ${university}.`;
+                    break;
+                case (age >= 22 && age <= 65):
+                    const workplace = prompt("Введите название места работы:");
+                    message = `${name}, вы работаете в ${workplace}.`;
+                    break;
+                case (age > 66):
+                    message = `${name}, вы на заслуженном отдыхе.`;
+                    break;
+                default:
+                    message = "Возраст введён некорректно.";
+            }
+
+            alert(message);
+        }
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operator = document.getElementById('operator').value;
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        result = 'Ошибка: Деление на ноль';
+                    }
+                    break;
+                default:
+                    result = 'Ошибка: Неверный оператор';
+            }
+
+            document.getElementById('result').innerText = `Результат: ${result}`;
+        }
+    </script>
 </head>
 <body>
+<table>
+    <tr>
+        <td onmouseover="applyCl2(this)" onmouseout="removeCl2(this)" onclick="applyCl4(this)">Элемент 1</td>
+        <td ondblclick="applyCl3(this)">Элемент 2</td>
+        <td onclick="applyCl4(this)">Элемент 3</td>
+        <td onmouseover="changeColorToYellow(this)">Элемент 4</td>
+        <td ondblclick="changeBackgroundColor(this)">Элемент 5</td>
+        <td onclick="italicizeElement6(this)">Элемент 6</td>
+    </tr>
+</table>
 
+<div class="result">
+    <button onclick="addToSum(1)">1</button>
+    <button onclick="addToSum(2)">2</button>
+    <button onclick="addToSum(3)">3</button>
+    <button onclick="addToSum(4)">4</button>
+    <button onclick="addToSum(5)">5</button>
+    <button onclick="showResult()">Результат</button>
+</div>
+<div class="elements">
+    <p class="cl1">Текст с классом cl1</p>
+    <p class="cl2">Текст с классом cl2</p>
+    <p class="cl3">Текст с классом cl3</p>
+    <div class="cl4">Элемент таблицы с классом cl4</div>
+    <p class="cl5">Текст с классом cl5</p>
+</div>
+<div class="greet">
+    <h1>Добро пожаловать!</h1>
+    <button onclick="greetUser()">Приветствовать</button>
+    <div id="greeting"></div>
+</div>
+<div id="message" onclick="changeFont()" ondblclick="changeColor()">
+    Я, Пасеко Ксения Григорьевна, учусь работать с JavaScript.
+</div>
+<div class="age">
+    <h1>Сценарий Возраста</h1>
+    <button onclick="getUserInfo()">Узнать информацию</button>
+</div>
+<div class="calculator">
+    <h1>Простой Калькулятор</h1>
+    <input type="number" id="num1" placeholder="Первое число" required>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" placeholder="Второе число" required>
+    <button onclick="calculate()">Посчитать</button>
+    <div class="result" id="result"></div>
+</div>
 </body>
 </html>
