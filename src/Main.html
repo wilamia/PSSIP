@@ -2,9 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
 </head>
 <body>
+<h1>JavaScript Functions Example</h1>
+<button onclick="testSum()">Сумма двух чисел</button>
+<button onclick="setDayOfWeek()">Установить день недели</button>
+<button onclick="addToArray()">Добавить числа в массив</button>
+<button onclick="testGreeting()">Приветствие пользователя</button>
+<button onclick="testReverseString()">Реверс строки</button>
+<button onclick="testRepeatString()">Повторить строку</button>
 
+<script>
+    // 1. Функция для суммы двух чисел
+    function sumOfInputs() {
+        const num1 = parseFloat(prompt("Введите первое число:")) || 0;
+        const num2 = parseFloat(prompt("Введите второе число:")) || 0;
+        alert(`Сумма: ${num1 + num2}`);
+    }
+
+    function testSum() {
+        sumOfInputs();
+    }
+
+    // 2. Функции для глобальной переменной и вывода названия дня недели
+    let dayOfWeek;
+
+    function setDayOfWeek() {
+        dayOfWeek = parseInt(prompt("Введите номер дня недели (1-7):"), 10);
+        alert(printDayName());
+    }
+
+    function printDayName() {
+        switch (dayOfWeek) {
+            case 1: return "Понедельник";
+            case 2: return "Вторник";
+            case 3: return "Среда";
+            case 4: return "Четверг";
+            case 5: return "Пятница";
+            case 6: return "Суббота";
+            case 7: return "Воскресенье";
+            default: return "Некорректный номер дня";
+        }
+    }
+
+    // 3. Функции для среднего значения и проверки наличия элемента
+    let numbers = [];
+
+    function addToArray() {
+        let input;
+        while ((input = prompt("Введите число (или нажмите Cancel для завершения):")) !== null) {
+            numbers.push(parseFloat(input));
+        }
+        const average = calculateAverage();
+        const exists = checkAverageInArray(average);
+        alert(`Среднее значение: ${average}. ${exists ? 'Элемент присутствует.' : 'Элемент отсутствует.'}`);
+    }
+
+    function calculateAverage() {
+        const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+        return numbers.length ? sum / numbers.length : 0;
+    }
+
+    function checkAverageInArray(average) {
+        return numbers.includes(average);
+    }
+
+    // 4. Стрелочная функция для реверсирования строки
+    const reverseString = (str) => str.split('').reverse().join('');
+
+    function testReverseString() {
+        const inputString = prompt("Введите строку для реверса:");
+        const reversed = reverseString(inputString);
+        alert(`Реверсированная строка: ${reversed}`);
+    }
+
+    // 5. Функция для приветственного сообщения
+    function greetUser(fullName, age, greetFunction) {
+        greetFunction(fullName, age);
+    }
+
+    function greeting(fullName, age) {
+        if (age < 18) {
+            alert(`Привет, ${fullName}!`);
+        } else if (age < 30) {
+            alert(`Как поживаете, ${fullName}?`);
+        } else if (age < 40) {
+            alert(`Добрый день, ${fullName}!`);
+        } else {
+            alert(`Как себя чувствуете, ${fullName}?`);
+        }
+    }
+
+    function testGreeting() {
+        const fullName = prompt("Введите ФИО:");
+        const age = parseInt(prompt("Введите ваш возраст:"), 10);
+        greetUser(fullName, age, greeting);
+    }
+
+    // 6. Функция с замыканием
+    function repeatString(str) {
+        return function(count) {
+            return str.repeat(count);
+        };
+    }
+
+    function testRepeatString() {
+        const inputString = prompt("Введите строку для повторения:");
+        const count = parseInt(prompt("Сколько раз повторить?"), 10);
+        const repeatFunc = repeatString(inputString);
+        alert(repeatFunc(count));
+    }
+</script>
 </body>
 </html>
