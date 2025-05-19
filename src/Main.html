@@ -2,7 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Fairy Tale Heroes</title>
+    <script>
+        class FairyTaleHero {
+            constructor(fairyTaleName) {
+                this.fairyTaleName = fairyTaleName;
+            }
+        }
+
+        class Character extends FairyTaleHero {
+            constructor(name, characterType, fairyTaleName) {
+                super(fairyTaleName);
+                this.name = name;
+                this.characterType = characterType;
+            }
+
+            describeHero() {
+                console.log(`${this.name} (${this.characterType}) is a character from the fairy tale "${this.fairyTaleName}".`);
+            }
+        }
+
+        const characters = [
+            new Character('Snow Maiden', 'positive', 'Snow Maiden'),
+            new Character('Father Frost', 'positive', 'Snow Maiden'),
+            new Character('Hare', 'positive', 'Snow Maiden'),
+            new Character('Wolf', 'negative', 'Little Red Riding Hood'),
+            new Character('Seven Dwarfs', 'negative', 'Snow White'),
+            new Character('Cat Barsik', 'negative', 'Puss in Boots')
+        ];
+
+        function outputDescription(character) {
+            character.describeHero();
+        }
+
+        console.log("Character Descriptions:");
+        characters.forEach(outputDescription);
+
+        console.log("\nCharacter Descriptions using a loop:");
+        characters.forEach(function(character) {
+            character.describeHero();
+        });
+    </script>
 </head>
 <body>
 
