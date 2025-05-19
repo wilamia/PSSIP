@@ -2,7 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Person</title>
+    <script>
+        class Person {
+            constructor(name, age, gender, socialStatus) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+                this.socialStatus = socialStatus;
+            }
+
+            askInfo() {
+                let activityQuestion = '';
+                if (this.gender === 'м') {
+                    activityQuestion = `${this.name}, вы занимаетесь спортом?`;
+                } else if (this.gender === 'ж') {
+                    activityQuestion = `${this.name}, вы занимаетесь фитнесом?`;
+                } else {
+                    return 'Пол не определен.';
+                }
+                const activityResponse = prompt(activityQuestion);
+                return `Имя: ${this.name}, Возраст: ${this.age}, Пол: ${this.gender}, Социальный статус: ${this.socialStatus}, Ответ: ${activityResponse}`;
+            }
+        }
+
+        function createPerson() {
+            const name = prompt("Введите имя:");
+            const age = prompt("Введите возраст:");
+            const gender = prompt("Введите пол (м/ж):");
+            const socialStatus = prompt("Введите социальный статус:");
+
+            return new Person(name, age, gender, socialStatus);
+        }
+
+        const person1 = createPerson();
+        const response1 = person1.askInfo();
+        console.log(response1);
+
+        const person2 = createPerson();
+        const response2 = person2.askInfo();
+        console.log(response2);
+    </script>
 </head>
 <body>
 
