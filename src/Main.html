@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Сценарии на JavaScript</title>
+    <script>
+        // Сценарий 1: Возвращает наименьший из переданных аргументов
+        function findMinimum(...args) {
+            return Math.min(...args);
+        }
+
+        // Сценарий 2: Находит позицию первого символа первого вхождения подстроки
+        function findSubstringPosition(str, substring) {
+            return str.indexOf(substring);
+        }
+
+        window.onload = function() {
+            const min = findMinimum(5, 3, 8, 1, 4);
+            console.log(`Наименьший элемент: ${min}`);
+
+            const position = findSubstringPosition("Hello, world!", "world");
+            console.log(`Позиция подстроки: ${position}`);
+        };
+    </script>
 </head>
 <body>
 
