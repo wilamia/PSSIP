@@ -14,16 +14,87 @@
             return str.indexOf(substring);
         }
 
+        // Сценарий 3: Определение поры года по текущей дате
+        function showSeasonMonths() {
+            const month = new Date().getMonth(); // 0-11
+            let season;
+            switch (month) {
+                case 11: case 0: case 1:
+                    season = "Зима: декабрь, январь, февраль";
+                    break;
+                case 2: case 3: case 4:
+                    season = "Весна: март, апрель, май";
+                    break;
+                case 5: case 6: case 7:
+                    season = "Лето: июнь, июль, август";
+                    break;
+                case 8: case 9: case 10:
+                    season = "Осень: сентябрь, октябрь, ноябрь";
+                    break;
+            }
+            alert(season);
+        }
+
+        // Сценарий 4: Определение возраста по дате рождения
+        function calculateAge() {
+            const birthDate = prompt("Введите дату рождения (гггг-мм-дд):");
+            if (!birthDate) return;
+
+            const birth = new Date(birthDate);
+            const today = new Date();
+            let age = today.getFullYear() - birth.getFullYear();
+            const m = today.getMonth() - birth.getMonth();
+
+            if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+                age--;
+            }
+
+            alert(`Ваш возраст: ${age}`);
+        }
+
+        // Сценарий 5: Расчёт времени между кликами по кнопкам
+        let startTime;
+
+        function startTimer() {
+            startTime = new Date();
+            console.log("Таймер запущен.");
+        }
+
+        function endTimer() {
+            if (!startTime) {
+                alert("Сначала нажмите кнопку Start.");
+                return;
+            }
+            const endTime = new Date();
+            const diff = (endTime - startTime) / 1000; // в секундах
+            alert(`Прошло времени: ${diff} секунд`);
+            startTime = null;
+        }
+
+        // Сценарий 6: Проверка, начинается ли строка с цифры
+        function startsWithDigit(str) {
+            const regex = /^\d/;
+            return regex.test(str);
+        }
+
         window.onload = function() {
             const min = findMinimum(5, 3, 8, 1, 4);
             console.log(`Наименьший элемент: ${min}`);
 
             const position = findSubstringPosition("Hello, world!", "world");
             console.log(`Позиция подстроки: ${position}`);
+
+            // Пример проверки строки
+            const testStr = "1Hello";
+            console.log(`Строка "${testStr}" начинается с цифры: ${startsWithDigit(testStr)}`);
         };
     </script>
 </head>
 <body>
-
+<button onclick="showSeasonMonths()">Узнать текущую пору года</button>
+<button onclick="calculateAge()">Рассчитать возраст</button>
+<br><br>
+<button onclick="startTimer()">Start</button>
+<button onclick="endTimer()">End</button>
 </body>
 </html>
