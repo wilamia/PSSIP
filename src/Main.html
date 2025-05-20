@@ -10,6 +10,27 @@
                 this.age = age;
                 this.gender = gender;
                 this.socialStatus = socialStatus;
+
+                // 1. Запрет изменения значения свойства name
+                Object.defineProperty(this, 'name', {
+                    writable: false,
+                    configurable: true,
+                    enumerable: true
+                });
+
+                // 2. Запрет удаления свойства age
+                Object.defineProperty(this, 'age', {
+                    configurable: false,
+                    writable: true,
+                    enumerable: true
+                });
+
+                // 3. Запрет вывода в циклах для socialStatus
+                Object.defineProperty(this, 'socialStatus', {
+                    enumerable: false,
+                    writable: true,
+                    configurable: true
+                });
             }
 
             askInfo() {
@@ -39,12 +60,27 @@
         const response1 = person1.askInfo();
         console.log(response1);
 
-        const person2 = createPerson();
-        const response2 = person2.askInfo();
-        console.log(response2);
+        // Попытка изменить name — не сработает
+        person1.name = "Новое имя";
+        console.log("После попытки изменить имя:", person1.name);
+
+        // Попытка удалить age — не сработает
+        delete person1.age;
+        console.log("После попытки удалить возраст:", person1.age);
+
+        // Вывод свойств 1-м способом — for...in (пропустит socialStatus)
+        console.log("Вывод свойств через for...in:");
+        for (let key in person1) {
+            console.log(`${key}: ${person1[key]}`);
+        }
+
+        // Вывод свойств 2-м способом — Object.getOwnPropertyNames (выведет все, включая socialStatus)
+        console.log("Вывод свойств через Object.getOwnPropertyNames:");
+        Object.getOwnPropertyNames(person1).forEach(key => {
+            console.log(`${key}: ${person1[key]}`);
+        });
     </script>
 </head>
 <body>
-
 </body>
 </html>
