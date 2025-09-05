@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка прокрутки и изменение размера окна</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
+
+<h1>Проверка прокрутки и изменение размера окна</h1>
+
+<button id="scrollCheckButton">Проверить вертикальную прокрутку</button>
+<div id="scrollResult"></div>
+
+<button id="resizeButton">Изменить высоту окна</button>
+
+<script>
+    document.getElementById('scrollCheckButton').addEventListener('click', function() {
+        const hasVerticalScroll = window.innerHeight < document.documentElement.scrollHeight;
+        document.getElementById('scrollResult').innerText = hasVerticalScroll ? 'Есть вертикальная прокрутка' : 'Вертикальной прокрутки нет';
+    });
+
+    document.getElementById('resizeButton').addEventListener('click', function() {
+        let height = 400;
+        const interval = setInterval(() => {
+            window.scrollBy(0, 100)
+            window.resizeBy(0, height)
+            height += 100;
+            if (height >= 2600) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    });
+</script>
 
 </body>
 </html>

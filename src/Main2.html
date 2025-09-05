@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приветственное сообщение</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Приветственное сообщение</h1>
+<button id="startButton">Начать</button>
+<div id="messages"></div>
+
+<script>
+    document.getElementById('startButton').addEventListener('click', function() {
+        const userName = prompt("Введите ваше имя:");
+        const interval = parseInt(prompt("Введите интервал в миллисекундах:"), 10);
+
+        if (userName && !isNaN(interval) && interval > 0) {
+            const messagesDiv = document.getElementById('messages');
+            messagesDiv.innerHTML = '';
+
+            const greetingInterval = setInterval(() => {
+                const message = `Привет, ${userName}!`;
+                messagesDiv.innerHTML += `<p>${message}</p>`;
+            }, interval);
+
+            setTimeout(() => {
+                clearInterval(greetingInterval);
+                messagesDiv.innerHTML += '<p>Вывод сообщений завершен.</p>';
+            }, 10 * interval);
+        } else {
+            alert("Пожалуйста, введите корректные данные.");
+        }
+    });
+</script>
+
+</body>
+</html>
